@@ -1,37 +1,23 @@
-package com.qbutton.dialog
+package com.qbutton.ui
 
-import com.intellij.openapi.ui.DialogWrapper
+import Constants
 import com.intellij.util.ui.UIUtil.setEnabled
 import java.awt.Color
 import java.awt.Cursor
 import java.awt.Toolkit
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent
-import javax.swing.Action
-import javax.swing.JComponent
 import javax.swing.JLabel
 import javax.swing.JPanel
-import javax.swing.border.Border
 
-class FlashlightDialogWrapper : DialogWrapper(false) {
+class FlashlightPanel {
 
-    private lateinit var content: JPanel
+    lateinit var content: JPanel
     private var flashlightLabel: JLabel? = null
 
     init {
-        init()
-        setResizable(false)
-        title = "Flashlight"
         addFlashLightListener()
     }
-
-    override fun createSouthPanel() = null
-
-    override fun createContentPaneBorder(): Border? = null
-
-    override fun createActions(): Array<Action> = emptyArray()
-
-    override fun createCenterPanel(): JComponent = content
 
     fun createUIComponents() {
         content = JPanel().apply {
@@ -40,17 +26,27 @@ class FlashlightDialogWrapper : DialogWrapper(false) {
         }
     }
 
+    fun resetState(): Boolean {
+        setEnabled(flashlightLabel!!, true, false)
+        content.background = Color.white
+
+        return true
+    }
+
     private fun addFlashLightListener() {
         content.addMouseListener(object : MouseAdapter() {
             override fun mouseClicked(e: MouseEvent?) {
                 if (flashlightLabel!!.isEnabled) {
-                    setEnabled(flashlightLabel!!, false, false)
-                    content.background = Color(60, 63, 65)
+                    darken()
                 } else {
-                    setEnabled(flashlightLabel!!, true, false)
-                    content.background = Color.white
+                    resetState()
                 }
             }
         })
+    }
+
+    private fun darken() {
+        setEnabled(flashlightLabel!!, false, false)
+        content.background = Constants.INTELLIJ_GRAY
     }
 }

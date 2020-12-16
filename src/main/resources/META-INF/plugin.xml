@@ -4,20 +4,23 @@
     <vendor email="mr.arsok@gmail.com">Developer</vendor>
 
     <description><![CDATA[
-    Too dark in your room and you want to find something? <br>
-    Now you can do it right here! <br> <br>
-    <i> Awesome icon was made by <a href="https://www.flaticon.com/free-icon/flashlight_1471561" title="photo3idea_studio">photo3idea_studio</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></i>
+    Is it too dark? <br>
+    Maybe you want to lighten things up a little? <br>
+    Now you can do it right from your favourite IDE! <br>
+    Flashlight will appear in Tools menu <br> <br>
+    <i> Awesome icon was made by
+    <a href="https://flaticon.com/free-icon/flashlight_1471561" title="photo3idea_studio">photo3idea_studio</a> from
+        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+    </i>
     ]]></description>
 
-    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
     <actions>
-        <group id="Flashlight.FlashlightMenu" text="Flashlight" description="Flashlight action">
+        <group id="Flashlight.FlashlightMenu" text="Flashlight" description="Flashlight">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
-            <action id="Flashlight.LightAction" class="com.qbutton.action.ShowFlashlightDialogAction" text="Flashlight"
-                    description="Light it up"/>
+            <action id="Flashlight.ShowFlashlightPopupAction" class="com.qbutton.action.ShowFlashlightPopupAction"
+                    text="Flashlight" icon="AllIcons.Actions.IntentionBulb" description="Open flashlight"/>
         </group>
     </actions>
 </idea-plugin>

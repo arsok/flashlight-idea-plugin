@@ -19,7 +19,7 @@
     <actions>
         <group id="Flashlight.FlashlightMenu" text="Flashlight" description="Flashlight">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
-            <action id="Flashlight.ShowFlashlightPopupAction" class="com.qbutton.action.ShowFlashlightPopupAction"
+            <action id="Flashlight.ShowFlashlightPopupAction" class="com.qbutton.flashlight.action.ShowFlashlightPopupAction"
                     text="Flashlight" icon="AllIcons.Actions.IntentionBulb" description="Open flashlight"/>
         </group>
     </actions>

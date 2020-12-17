@@ -1,9 +1,9 @@
-package com.qbutton.action
+package com.qbutton.flashlight.action
 
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.project.DumbAwareAction
 import com.intellij.ui.awt.RelativePoint
-import com.qbutton.factory.FlashlightPopupFactory
+import com.qbutton.flashlight.factory.FlashlightPopupFactory
 import java.awt.Point
 
 class ShowFlashlightPopupAction : DumbAwareAction() {

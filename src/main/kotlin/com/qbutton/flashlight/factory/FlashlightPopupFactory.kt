@@ -1,9 +1,9 @@
-package com.qbutton.factory
+package com.qbutton.flashlight.factory
 
-import Constants
+import com.qbutton.flashlight.Constants
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.ui.popup.*
-import com.qbutton.ui.FlashlightPanel
+import com.qbutton.flashlight.ui.FlashlightPanel
 
 object FlashlightPopupFactory {
 

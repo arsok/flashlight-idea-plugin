@@ -1,6 +1,6 @@
-package com.qbutton.ui
+package com.qbutton.flashlight.ui
 
-import Constants
+import com.qbutton.flashlight.Constants
 import com.intellij.util.ui.UIUtil.setEnabled
 import java.awt.Color
 import java.awt.Cursor

@@ -1,3 +1,5 @@
+package com.qbutton.flashlight
+
 import java.awt.Color
 
 object Constants {

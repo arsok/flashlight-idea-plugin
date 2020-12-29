@@ -1,8 +1,12 @@
 package com.qbutton.flashlight.factory
 
-import com.qbutton.flashlight.Constants
 import com.intellij.icons.AllIcons
-import com.intellij.openapi.ui.popup.*
+import com.intellij.openapi.ui.popup.ActiveIcon
+import com.intellij.openapi.ui.popup.ComponentPopupBuilder
+import com.intellij.openapi.ui.popup.IconButton
+import com.intellij.openapi.ui.popup.JBPopup
+import com.intellij.openapi.ui.popup.JBPopupFactory
+import com.qbutton.flashlight.Constants
 import com.qbutton.flashlight.ui.FlashlightPanel
 
 object FlashlightPopupFactory {
@@ -22,7 +26,7 @@ object FlashlightPopupFactory {
             .setTitle(Constants.POPUP_TITLE)
             .setTitleIcon(titleIcon)
             .setCancelButton(cancelButton)
-            .setCancelCallback(flashlightPanel::resetState)
+            .setCancelCallback(flashlightPanel::darken)
             .setCancelKeyEnabled(true)
             .setCancelOnClickOutside(true)
     }

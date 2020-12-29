@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.qbutton'
-version '0.1-SNAPSHOT'
+version '1.0'
 
 repositories {
     mavenCentral()
@@ -18,8 +18,5 @@ dependencies {
 }
 
 intellij {
-    version '2020.2.3'
-}
-patchPluginXml {
-    changeNotes """ First version """
+    version '2020.3'
 }

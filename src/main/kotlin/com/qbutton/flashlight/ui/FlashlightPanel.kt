@@ -1,7 +1,7 @@
 package com.qbutton.flashlight.ui
 
-import com.qbutton.flashlight.Constants
 import com.intellij.util.ui.UIUtil.setEnabled
+import com.qbutton.flashlight.Constants
 import java.awt.Color
 import java.awt.Cursor
 import java.awt.Toolkit
@@ -12,8 +12,9 @@ import javax.swing.JPanel
 
 class FlashlightPanel {
 
-    lateinit var content: JPanel
     private var flashlightLabel: JLabel? = null
+
+    lateinit var content: JPanel
 
     init {
         addFlashLightListener()
@@ -26,9 +27,9 @@ class FlashlightPanel {
         }
     }
 
-    fun resetState(): Boolean {
-        setEnabled(flashlightLabel!!, true, false)
-        content.background = Color.white
+    fun darken(): Boolean {
+        setEnabled(flashlightLabel!!, false, false)
+        content.background = Constants.INTELLIJ_GRAY
 
         return true
     }
@@ -39,14 +40,14 @@ class FlashlightPanel {
                 if (flashlightLabel!!.isEnabled) {
                     darken()
                 } else {
-                    resetState()
+                    lighten()
                 }
             }
         })
     }
 
-    private fun darken() {
-        setEnabled(flashlightLabel!!, false, false)
-        content.background = Constants.INTELLIJ_GRAY
+    private fun lighten() {
+        setEnabled(flashlightLabel!!, true, false)
+        content.background = Color.white
     }
 }

@@ -1,25 +1,24 @@
-<idea-plugin>
+<idea-plugin url="https://github.com/arsok/flashlight-idea-plugin/">
     <id>com.qbutton.Flashlight</id>
     <name>Flashlight</name>
-    <vendor email="mr.arsok@gmail.com">Developer</vendor>
+    <vendor url="https://github.com/arsok">arsok</vendor>
 
     <description><![CDATA[
     Is it too dark? <br>
-    Maybe you want to lighten things up a little? <br>
-    Now you can do it right from your favourite IDE! <br>
-    Flashlight will appear in Tools menu <br> <br>
-    <i> Awesome icon was made by
-    <a href="https://flaticon.com/free-icon/flashlight_1471561" title="photo3idea_studio">photo3idea_studio</a> from
-        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-    </i>
+    Maybe you want to find something in your room or just lighten things up a little? <br>
+    Now you can do it right from your favorite IDE! <br> <br>
+    After installation seek light in Tools menu! <br> <br>
+    <i> P.S. Awesome <a href="https://flaticon.com/free-icon/flashlight_1471561" title="icon">icon</a> was made by
+    <a href="https://www.flaticon.com/authors/photo3idea-studio" title="photo3idea_studio">photo3idea_studio</a> </i>
     ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
 
     <actions>
-        <group id="Flashlight.FlashlightMenu" text="Flashlight" description="Flashlight">
+        <group id="com.qbutton.flashlight" text="Flashlight" description="Flashlight">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
-            <action id="Flashlight.ShowFlashlightPopupAction" class="com.qbutton.flashlight.action.ShowFlashlightPopupAction"
+            <action id="com.qbutton.flashlight.action.ShowFlashlightPopupAction"
+                    class="com.qbutton.flashlight.action.ShowFlashlightPopupAction"
                     text="Flashlight" icon="AllIcons.Actions.IntentionBulb" description="Open flashlight"/>
         </group>
     </actions>

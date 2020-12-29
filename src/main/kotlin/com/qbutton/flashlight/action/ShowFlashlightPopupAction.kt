@@ -2,15 +2,12 @@ package com.qbutton.flashlight.action
 
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.project.DumbAwareAction
-import com.intellij.ui.awt.RelativePoint
+import com.qbutton.flashlight.Constants
 import com.qbutton.flashlight.factory.FlashlightPopupFactory
-import java.awt.Point
 
 class ShowFlashlightPopupAction : DumbAwareAction() {
 
-    private val pointZero: RelativePoint = RelativePoint(Point(0, 0))
-
     override fun actionPerformed(event: AnActionEvent) {
-        FlashlightPopupFactory.createFlashlightPopup().show(pointZero)
+        FlashlightPopupFactory.createFlashlightPopup().show(Constants.POINT_ZERO)
     }
 }

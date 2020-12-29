@@ -18,6 +18,7 @@
         <properties>
           <disabledIcon value="icons/flashlightOff.png"/>
           <doubleBuffered value="false"/>
+          <enabled value="false"/>
           <icon value="icons/flashlightOn.png"/>
           <opaque value="false"/>
           <text value=""/>

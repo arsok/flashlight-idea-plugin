@@ -2,7 +2,6 @@
     <id>com.qbutton.Flashlight</id>
     <name>Flashlight</name>
     <vendor url="https://github.com/arsok">arsok</vendor>
-    <idea-version since-build="191"/>
 
     <description><![CDATA[
     Is it too dark? <br>

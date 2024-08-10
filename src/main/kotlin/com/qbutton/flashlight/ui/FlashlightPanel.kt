@@ -1,7 +1,7 @@
 package com.qbutton.flashlight.ui
 
 import com.intellij.util.ui.UIUtil.setEnabled
-import com.qbutton.flashlight.Constants
+import com.qbutton.flashlight.Constants.INTELLIJ_GRAY
 import java.awt.Color
 import java.awt.Cursor
 import java.awt.Toolkit
@@ -24,12 +24,13 @@ class FlashlightPanel {
         content = JPanel().apply {
             cursor = Cursor.getPredefinedCursor(Cursor.HAND_CURSOR)
             preferredSize = Toolkit.getDefaultToolkit().screenSize
+            background = INTELLIJ_GRAY
         }
     }
 
     fun darken(): Boolean {
         setEnabled(flashlightLabel!!, false, false)
-        content.background = Constants.INTELLIJ_GRAY
+        content.background = INTELLIJ_GRAY
 
         return true
     }

@@ -16,23 +16,23 @@ class FlashlightPanelTest {
     }
 
     @Test
-    fun flashlightOn() = assertFlashlightOn()
-
-    @Test
-    fun flashlightOff() {
+    fun flashlightOn() {
         clickOnPanel()
-        assertFlashlightOff()
+        assertFlashlightOn()
     }
 
     @Test
+    fun flashlightOff() = assertFlashlightOff()
+
+    @Test
     fun flashlightOnAgain() {
-        repeat(2) { clickOnPanel() }
+        repeat(3) { clickOnPanel() }
         assertFlashlightOn()
     }
 
     @Test
     fun flashlightOffAgain() {
-        repeat(3) { clickOnPanel() }
+        repeat(2) { clickOnPanel() }
         assertFlashlightOff()
     }
 
